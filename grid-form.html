@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        :root {
+            --color-white: #f3f3f3;
+            --color-darkblue: #1b1b32;
+            --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+            --color-green: #37af65;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            background: var(--color-darkblue);
+            background-image: linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7) ), url(https://raw.githubusercontent.com/lasjorg/fcc-form-example-image/master/67103817-7c51e200-f18b-11e9-975f-f74561336a9a-lj.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            
+        }
+        /* html,body{
+            overflow: hidden;
+        } */
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.4;
+            color: var(--color-white);
+            margin: 0;
+            height:100%;
+        }
+        #main{
+            display:flex;
+            flex-direction:column;
+            align-items: center;
+            padding:3rem;
+            /* height:2000px; */
+            
+        }
+        header{
+            text-align:center;
+        }
+        main{
+            max-width: 700px;
+            
+        }
+        form{
+            display:flex;
+            flex-direction:column;
+            border-radius:0.25rem;
+            padding: 2.5rem;
+            background:rgba(27, 27, 50, 0.8);
+        }
+
+        form-item{
+            /* width:70%; */
+            /* margin:0.5em 15%; */
+            display:flex;
+            flex-direction:column;
+            margin-bottom:1.25rem;
+            /* padding: 0.25rem; */
+            /* align-items:center; */
+        }
+        label{
+            margin-bottom:0.5rem;
+        }
+        [type="text"]{
+            width:100%;
+            /* align-self:center; */
+            border-radius:5px;
+            height:2rem;
+        }
+        button{
+            width:60%;
+            align-self:center;
+            height:2.5rem;
+            background: linear-gradient(35deg,#ccffff,#bbbbbb);
+            border-radius:10px;
+        }
+        select{
+            height:2rem;
+        }
+        textarea{
+            height:5rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <header>
+            <h2>freeCodeCamp Survey Form</h2>
+            <p>Thank you for taking the time to help us improve the platform</p>
+        </header>
+        <main>
+            <form>
+                <form-item>
+                    <label for="username">Name</label>
+                    <input type="text" id="username" placeholder="Enter your name">
+                </form-item>
+                <form-item>
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="Enter your Email">
+                </form-item>
+                <form-item>
+                    <label for="Age">Age(optional)</label>
+                    <input type="text" id="Age" placeholder="Enter your age">
+                </form-item>
+                <form-item>
+                    <label for="selectCurrent">Which option best describes your current role?</label>
+                    <select value="null" id="selectCurrent">
+                        <option value="null" selected disabled>Select current role</option>
+                        <option value="student">student</option>
+                        <option value="Full job">Full job</option>
+                        <option value="Full learner">Full learner</option>
+                        <option value="other">other</option>
+                        <option value="prefer not to say">prefer not to say</option>
+                    </select>
+                </form-item>
+                <form-item >
+                        <label>Would you recommend freeCodeCamp to a friend?</label>
+                        
+                            <label>
+                                <input type="radio" name="friend" checked>Definitely
+                            </label>
+                            <label>
+                                <input type="radio" name="friend">Maybe
+                            </label>
+                            <label>
+                                <input type="radio" name="friend">Not sure
+                            </label>
+                        
+                </form-item>
+                <form-item>
+                    <label for="favorite">What is your favorite feature of freeCodeCamp?</label>
+                    <select value="null" id="selectFavorit">
+                        <option value="null" selected disabled>Select an option</option>
+                        <option value="challenge">challenge</option>
+                        <option value="project">project</option>
+                    </select>
+                </form-item>
+                <form-item >
+                    <label>What would you like to see improved? (Check all that apply)</label>
+                        <label>
+                            <input type="checkbox">Front-end Projects
+                        </label>
+                        <label>
+                            <input type="checkbox">Back-end Prpkects                            
+                        </label>
+                        <label>
+                            <input type="checkbox">Data Visualization
+                        </label>
+                        <label>
+                            <input type="checkbox" >Challenges
+                        </label>
+                        <label > 
+                            <input type="checkbox" >Videos
+                        </label>
+                        <label>
+                            <input type="checkbox" >Wiki
+
+                        </label>
+                        <label >
+                            <input type="checkbox" >Forumn
+                        </label>
+                </form-item>
+                <form-item>
+                    <label>Any comments or suggestions</label>
+                    <textarea name="text" placeholder="Enter your comment here..." ></textarea>
+                </form-item>
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
