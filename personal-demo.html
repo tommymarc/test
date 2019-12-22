@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,body{
+            margin:0;
+            height:100%;
+            padding:0;
+        }
+        body{
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 1.4;
+            color: white;
+        }
+        content{
+            height:100%;
+        }
+        nav{
+            display:flex;
+            background:red;
+            justify-content:flex-end;
+            position:fixed;
+            width:100%;
+            top:0;
+            left:0;
+        }
+        ul{
+            display:flex;
+            margin-right:2rem; 
+            list-style-type: none;
+        }
+        nav a {
+            display:block;
+            font-size:1.5rem;
+            padding:0.5rem;
+            text-decoration:none;
+            color:white;
+        }
+        #content{
+            height:100%;
+            font-size:60%;
+        }
+        #about{
+            background:rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            width: 100%;
+            height: 100vh;
+        }
+        h2{
+            font-size:3rem;
+            margin: 0 auto 3rem auto;
+        }
+        #work{
+            padding: 10rem 2rem;
+            text-align:center;
+            background:linear-gradient(35deg,#ccffff,#ffcccc);
+        }
+        .div-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+            grid-gap:4rem;
+        }
+        .div-grid div{
+            width:320px;
+            height:500px;
+        }
+        .div-grid p{
+            background: linear-gradient(35deg,grey,black);
+            margin:0;
+        }
+        #contact{
+            background:gray;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            height:80vh;
+            padding:0 2rem;
+        }
+        footer{
+            display:flex;
+            font-weight: 300;
+            /* flex-grow:column; */
+            justify-content:space-around;
+            padding:2rem;
+            border-top: 4px solid red;
+            background:gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="about">
+                <h2>Hey I am Mimic</h2>
+                <p>a web developer</p>
+            </div>
+            <div id="work">
+                <h2>These are some of my projects</h2>
+                <div class="div-grid">
+                    <div style="background:burlywood;">
+                        <p>Tribute Page</p>
+                    </div>
+                    <div style="background:white;">
+                        <p>Tribute Page</p>
+                    </div>
+                    <div style="background:yellow;">
+                        <p>Tribute Page</p>
+                    </div>
+                    <div style="background:green;">
+                        <p>Tribute Page</p>
+                    </div>
+                    <div style="background:blue;">
+                        <p>Tribute Page</p>
+                    </div>
+                    <div style="background:pink;">
+                        <p>Tribute Page</p>
+                    </div>
+                </div>
+            </div>
+            <div id="contact">
+                <h2>Let's work together...</h2>
+                <p>How do you take your coffee</p>
+            </div>
+        </main>
+        <footer>
+            <p>**This is just a fake portfolio. All the projects and contact details given are not real.</p>
+            <p>© Created for freeCodeCamp </p>
+        </footer>
+    </div>
+</body>
+</html>
